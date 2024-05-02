@@ -33,4 +33,14 @@ After get the login user name and password, go to AWS console -> your instance, 
 
 * AWS Trouble Shooting Doc: https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/TroubleshootingInstancesConnecting.html
 
- 
+
+**Deploying a DAG (Directed Acyclic Graph) script to Apache Airflow - from localhost**
+
+1. DAG Folder Location: ls ~/airflow
+2. View the Configuration to find the dags_folder: airflow config get-value core dags_folder
+3. Change the dags_folder to the acutal folder name 
+4. Copy dag related scripts to the assigned dags_folder
+   if deploy airflow from local machine: <img width="400" alt="image" src="https://github.com/YannnnnaY/Data-Engineering-Projects/assets/120424783/c2b4e7bb-4b07-4082-84c8-6217cbd1bea8">
+6. kick off the dag on airflow console and check the results
+   <img width="1000" alt="image" src="https://github.com/YannnnnaY/Data-Engineering-Projects/assets/120424783/9a4e9dc0-5970-4f2a-90ae-55360c3a0cee">
+
