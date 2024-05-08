@@ -1,9 +1,9 @@
-# Data-Engineering-Projects
+## Data-Engineering-Notes
 
 
 <img src="https://github.com/YannnnnaY/Data-Engineering-Projects/assets/120424783/7891216d-492a-4cf1-8df1-4a8dd989dc82" width="600" >
 
-#### Apache Airflow
+###Apache Airflow
 
 <img src="https://github.com/YannnnnaY/Data-Engineering-Projects/assets/120424783/7b9f5419-e180-4397-80a2-194e73504ae2" width="500" >
 
@@ -44,3 +44,20 @@ After get the login user name and password, go to AWS console -> your instance, 
 6. kick off the dag on airflow console and check the results
    <img width="1000" alt="image" src="https://github.com/YannnnnaY/Data-Engineering-Projects/assets/120424783/9a4e9dc0-5970-4f2a-90ae-55360c3a0cee">
 
+
+
+## Google Cloud Platform
+
+<img src="https://github.com/YannnnnaY/Data-Engineering-Projects/assets/120424783/398934b2-60b6-4881-a20e-d5624564194c" width="800" >
+
+
+#### Compute Engine
+1. Create a VM instance
+2. connect to instance through SSH
+3. Update the VM: 'sudo apt-get update'
+4. check if python is installed
+
+
+#### Cloud shell
+- how to check the cloud buckets
+<img src="https://github.com/YannnnnaY/Data-Engineering-Projects/assets/120424783/48abd086-1a54-4573-adce-b46d19c7f436" width="600" >
