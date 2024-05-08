@@ -1,9 +1,7 @@
-## Data-Engineering-Notes
-
+# Apache Airflow
 
 <img src="https://github.com/YannnnnaY/Data-Engineering-Projects/assets/120424783/7891216d-492a-4cf1-8df1-4a8dd989dc82" width="600" >
 
-###Apache Airflow
 
 <img src="https://github.com/YannnnnaY/Data-Engineering-Projects/assets/120424783/7b9f5419-e180-4397-80a2-194e73504ae2" width="500" >
 
@@ -46,7 +44,7 @@ After get the login user name and password, go to AWS console -> your instance, 
 
 
 
-## Google Cloud Platform
+# Google Cloud Platform
 
 <img src="https://github.com/YannnnnaY/Data-Engineering-Projects/assets/120424783/398934b2-60b6-4881-a20e-d5624564194c" width="800" >
 
@@ -61,3 +59,15 @@ After get the login user name and password, go to AWS console -> your instance, 
 #### Cloud shell
 - how to check the cloud buckets
 <img src="https://github.com/YannnnnaY/Data-Engineering-Projects/assets/120424783/48abd086-1a54-4573-adce-b46d19c7f436" width="600" >
+
+### How to schedule a cron using py script by Cloud Functions & Pub/Sub
+1. Create a bucket for the project
+2. Create a Pub/Sub
+   <img width="1000" alt="image" src="https://github.com/YannnnnaY/Data-Engineering-Projects/assets/120424783/2b65b03a-b906-413f-8c42-fa44612c2fd3">
+3. Create a cron using Job Scheduler 
+   * connect to the pub/sub created in step 2
+   <img width="1000" alt="image" src="https://github.com/YannnnnaY/Data-Engineering-Projects/assets/120424783/42f25aed-0a5f-490f-a721-7c738a08e8b0">
+4. Cloud functions:
+   * Trigger by the Pub/Sub created in step 2
+   * Save the scripts either in a zip folder in bucket or using the internal editor
+     <img width="1000" alt="image" src="https://github.com/YannnnnaY/Data-Engineering-Projects/assets/120424783/34d035a6-7e6d-49c2-a32e-c9e8e3dfe9bf">
