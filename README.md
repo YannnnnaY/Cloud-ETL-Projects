@@ -57,16 +57,31 @@ After get the login user name and password, go to AWS console -> your instance, 
 
 
 #### Cloud shell
-- how to check the cloud buckets
+* how to check the cloud buckets 
 <img src="https://github.com/YannnnnaY/Data-Engineering-Projects/assets/120424783/48abd086-1a54-4573-adce-b46d19c7f436" width="600" >
+
+* if error says no authorization/access to buckets, run:
+  - gsutil config
+  - gcloud auth login
+
 
 ### How to schedule a cron using py script by Cloud Functions & Pub/Sub
 1. Create a bucket for the project
+   * If a file couldn't be uploaded to a bucket successfully in gcp local testing env, try run this in cloud shell:
+      - gcloud auth login
+      - gcloud auth application-default login
+   * If a file couldn't be uploaded to a bucket successfully in cloud function env, see explanation below:
+      - When you run a Google Cloud Function, it runs with an identity that you get to specify.
+      See here: https://cloud.google.com/functions/docs/securing/function-identity
+      When you then use Google Cloud Client libraries, they implicitly know how to interact with the environment and when you make calls to them (eg. Google Cloud Storage read requests), they are implicitly authenticated as that identity.  The identity is a Service Account.  You should then grant that service account permissions applicable for what your function is doing.  Using this "Application Default Credentials" technique means that YOU don't have to mess with credentials and authentication within the logic of your own code.  When you deploy your function ... that is where you get to map your desired service account to the identity that the function will run with.
+
 2. Create a Pub/Sub
    <img width="1000" alt="image" src="https://github.com/YannnnnaY/Data-Engineering-Projects/assets/120424783/2b65b03a-b906-413f-8c42-fa44612c2fd3">
+
 3. Create a cron using Job Scheduler 
    * connect to the pub/sub created in step 2
    <img width="1000" alt="image" src="https://github.com/YannnnnaY/Data-Engineering-Projects/assets/120424783/42f25aed-0a5f-490f-a721-7c738a08e8b0">
+
 4. Cloud functions:
    * Trigger by the Pub/Sub created in step 2
    * Save the scripts either in a zip folder in bucket or using the internal editor
