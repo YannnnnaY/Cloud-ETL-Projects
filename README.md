@@ -73,7 +73,10 @@ After get the login user name and password, go to AWS console -> your instance, 
    * If a file couldn't be uploaded to a bucket successfully in cloud function env, see explanation below:
       - When you run a Google Cloud Function, it runs with an identity that you get to specify.
       See here: https://cloud.google.com/functions/docs/securing/function-identity
-      When you then use Google Cloud Client libraries, they implicitly know how to interact with the environment and when you make calls to them (eg. Google Cloud Storage read requests), they are implicitly authenticated as that identity.  The identity is a Service Account.  You should then grant that service account permissions applicable for what your function is doing.  Using this "Application Default Credentials" technique means that YOU don't have to mess with credentials and authentication within the logic of your own code.  When you deploy your function ... that is where you get to map your desired service account to the identity that the function will run with.
+      - When you then use Google Cloud Client libraries, they implicitly know how to interact with the environment and when you make calls to them (eg. Google Cloud Storage read requests), they are implicitly authenticated as that identity.  The identity is a Service Account.  You should then grant that service account permissions applicable for what your function is doing.  Using this "Application Default Credentials" technique means that YOU don't have to mess with credentials and authentication within the logic of your own code.  When you deploy your function ... that is where you get to map your desired service account to the identity that the function will run with.
+      - In IAM console:
+      <img src="https://github.com/YannnnnaY/Data-Engineering-Projects/assets/120424783/470b6778-f6b9-48dd-8253-96c18d91e29b" width="600" >
+
 
 2. Create a Pub/Sub
    <img width="1000" alt="image" src="https://github.com/YannnnnaY/Data-Engineering-Projects/assets/120424783/2b65b03a-b906-413f-8c42-fa44612c2fd3">
