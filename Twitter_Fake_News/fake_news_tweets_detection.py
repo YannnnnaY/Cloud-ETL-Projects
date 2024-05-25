@@ -560,40 +560,4 @@ print("Test Set Accuracy:", accuracy)
 
 
 
-# ## Next steps
-# 
-# ### Preprocessing
-# 
-# - Remove Stop words
-#     - Stop words include words like "and," "the," "is," "in," "at," "on," etc., which are essential for the structure of sentences but might not contribute much to the understanding or interpretation of the content when analyzing the text.
-# - Vectorizing the data
-#     -   from sklearn.feature_extraction.text import TfidfVectorizer (Convert text data to numerical features)
-# 
-# ### Clustering 
-# -   to compare with the subject column
-# -   K-means, DBSCAN
-# 
-# ### Classification
-# -   Logistic Regression
-# -   LSTM (Long Short-Term Memory) - a type of recurrent neural network (RNN) architecture. (Tensorflow)
-# 
-# ### Other techniques - still exploring
-# 
-# ### Test on both the title and content of tweets respectively. Compare their performance.
-#   
-# ### Performance evaluation
-# -   Remove the @ in all contents. the length of fake news would be shorter and that could change the model.
-# -   Confussion Matrix  
-# -   Kappa Statistics
-# -   Accuracy (TP+TN)/(TP+TN+FN+FP)
-# -   Precision TP/(TP+FP)
-# -   Recall/Sensitivity TP/(TP+FN)
-# - ...
-# 
-# 
-# ### Other steps
-# If we see different result between the analysis of title and content, we are going to dig deeper into that. For example, we need to check if the dataset is biased and how the biases have impact on the models. Then we can adjust our make improvements and get our conclusions  
-
-
-
 
